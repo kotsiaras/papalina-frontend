@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ΠΑΠΑΛΙΝΑ Reservations</title>
+  <link rel="stylesheet" href="css/admin.css">
+</head>
+<body>
+
+  <main class="admin-page">
+
+    <header class="admin-header">
+      <div>
+        <h1>ΠΑΠΑΛΙΝΑ</h1>
+        <p>Reservations Dashboard</p>
+      </div>
+
+      <div class="system-status">
+        <span></span>
+        Connected
+      </div>
+
+      <button id="openAddReservation" class="add-reservation-btn">
+    + Νέα Κράτηση
+</button>
+
+<button id="logoutBtn" class="logout-btn">
+    Αποσύνδεση
+</button>
+
+    </header>
+
+<section class="admin-filters">
+   <button class="filter-btn active" data-filter="today">Σήμερα</button>
+<button class="filter-btn" data-filter="pending">Σε αναμονή</button>
+<button class="filter-btn" data-filter="confirmed">Επιβεβαιωμένες</button>
+<button class="filter-btn" data-filter="cancelled">Ακυρωμένες</button>
+<button class="filter-btn" data-filter="history">Ιστορικό</button>
+</section>
+<div class="admin-search">
+    <input 
+        type="text" 
+        id="searchInput" 
+        placeholder="Αναζήτηση με όνομα ή τηλέφωνο..."
+    >
+</div>
+
+<section class="reservations-section">
+
+    <h2>Κρατήσεις</h2>
+
+    <div class="table-wrapper">
+
+        <table class="reservations-table">
+
+            <thead>
+
+                <tr>
+
+                    <th>Όνομα</th>
+
+                    <th>Ημερομηνία</th>
+
+                    <th>Ώρα</th>
+
+                    <th>Άτομα</th>
+
+                    <th>Τηλέφωνο</th>
+
+                    <th>Κατάσταση</th>
+
+                    <th>Ενέργειες</th>
+
+                </tr>
+
+            </thead>
+
+            <tbody id="reservationsBody">
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+</section>
+
+<section class="stats-grid">
+
+    <div class="stat-card">
+        <h2 id="totalReservations">0</h2>
+        <p>Συνολικές Κρατήσεις</p>
+    </div>
+
+    <div class="stat-card">
+        <h2 id="pendingReservations">0</h2>
+        <p>Σε Αναμονή</p>
+    </div>
+
+    <div class="stat-card">
+        <h2 id="confirmedReservations">0</h2>
+        <p>Επιβεβαιωμένες</p>
+    </div>
+
+    <div class="stat-card">
+        <h2 id="cancelledReservations">0</h2>
+        <p>Ακυρωμένες</p>
+    </div>
+
+</section>
+  </main>
+
+  <div id="reservationModal" class="modal-overlay">
+    <div class="modal-box">
+        <h2>Νέα Κράτηση</h2>
+
+        <form id="adminReservationForm">
+            <input type="text" id="adminFirstName" placeholder="Όνομα" required>
+            <input type="text" id="adminLastName" placeholder="Επίθετο" required>
+            <input type="tel" id="adminPhone" placeholder="Τηλέφωνο" required>
+            <input type="date" id="adminDate" required>
+
+            <select id="adminTime" required>
+                <option value="">Επιλέξτε ώρα</option>
+                <option value="14:00">14:00</option>
+                <option value="14:30">14:30</option>
+                <option value="15:00">15:00</option>
+                <option value="15:30">15:30</option>
+                <option value="16:00">16:00</option>
+                <option value="16:30">16:30</option>
+                <option value="17:00">17:00</option>
+                <option value="17:30">17:30</option>
+                <option value="18:00">18:00</option>
+                <option value="18:30">18:30</option>
+                <option value="19:00">19:00</option>
+                <option value="19:30">19:30</option>
+                <option value="20:00">20:00</option>
+                <option value="20:30">20:30</option>
+                <option value="21:00">21:00</option>
+                <option value="21:30">21:30</option>
+                <option value="22:00">22:00</option>
+                <option value="22:30">22:30</option>
+            </select>
+
+            <select id="adminPeople" required>
+                <option value="">Άτομα</option>
+                <option value="1">1 άτομο</option>
+                <option value="2">2 άτομα</option>
+                <option value="3">3 άτομα</option>
+                <option value="4">4 άτομα</option>
+                <option value="5">5 άτομα</option>
+                <option value="6">6 άτομα</option>
+                <option value="7">7 άτομα</option>
+                <option value="8">8 άτομα</option>
+                <option value="9">9 άτομα</option>
+                <option value="10">10 άτομα</option>
+                <option value="11">11 άτομα</option>
+                <option value="12">12 άτομα</option>
+            </select>
+
+            <p id="adminFormMessage"></p>
+
+            <div class="modal-actions">
+                <button type="button" id="closeReservationModal" class="btn-cancel">
+                    Άκυρο
+                </button>
+                <button type="submit" class="btn-save">
+                    Αποθήκευση
+                </button>
+            </div>
+        </form>
+    </div>
+</div>
+
+  <script src="js/admin.js"></script>
+</body>
+</html>

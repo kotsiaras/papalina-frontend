@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Μενού — ΠΑΠΑΛΙΝΑ | Φρέσκα Ψάρια & Θαλασσινά</title>
+<meta name="description" content="Το μενού της ΠΑΠΑΛΙΝΑ: φρέσκα ψάρια, θαλασσινά, ορεκτικά, σαλάτες, κυρίως πιάτα και επιδόρπια στην Αθήνα." />
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<header class="site-header scrolled">
+  <div class="container">
+    <a href="index.html" class="brand">ΠΑΠΑΛΙΝΑ</a>
+    <nav class="nav">
+      <a href="index.html">Αρχική</a><a href="about.html">Σχετικά</a><a href="menu.html">Μενού</a><a href="gallery.html">Γκαλερί</a><a href="contact.html">Επικοινωνία</a>
+    </nav>
+    
+    <button class="hamburger" aria-label="Μενού"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<main>
+  <section class="page-header on-primary">
+    <div class="container">
+      <h1 class="font-display">Το Μενού μας</h1>
+      <p>Επιλεγμένες γεύσεις της ελληνικής θάλασσας, μαγειρεμένες με σεβασμό στην παράδοση.</p>
+      <a href="papalina-menu.pdf" download class="btn btn-accent" style="margin-top:2rem">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+        Λήψη Μενού σε PDF
+      </a>
+    </div>
+  </section>
+
+ <div class="menu-nav">
+  <div class="container" style="overflow-x:auto">
+    <div class="menu-nav-inner">
+      <button data-cat="salads" class="active">Σαλάτες</button>
+      <button data-cat="cold">Κρύα Πιάτα</button>
+      <button data-cat="raw">Ωμά</button>
+      <button data-cat="hot">Ζεστά Πιάτα</button>
+      <button data-cat="soups">Σούπες</button>
+      <button data-cat="pasta">Ζυμαρικά</button>
+      <button data-cat="desserts">Γλυκά</button>
+      <button data-cat="drinks">Ποτά</button>
+    </div>
+  </div>
+</div>
+
+<section>
+  <div class="container" style="max-width:64rem">
+
+    <div id="salads" class="menu-section">
+      <h2>Σαλάτες</h2>
+      <div class="menu-divider"></div>
+      <div class="menu-items">
+        <article class="menu-item"><div class="menu-item-head"><h3>Χόρτα</h3><span class="price">€5.50</span></div></article>
+        <article class="menu-item"><div class="menu-item-head"><h3>Ελληνική</h3><span class="price">€9.80</span></div><p>Με ντοματίνια Κρήτης, αγγούρι, τρίχρωμες πιπεριές, κρεμμύδι, φέτα και ελαιόλαδο Λέσβου</p></article>
+        <article class="menu-item"><div class="menu-item-head"><h3>Νησιώτικη</h3><span class="price">€11.00</span></div><p>Με ντοματίνια Κρήτης, παιδικά χαρουπιού, ξινομυζήθρα Κρήτης, κρίταμα και ελαιόλαδο Λέσβου</p></article>
+        <article class="menu-item"><div class="menu-item-head"><h3>Σαλάτα Σπανάκι</h3><span class="price">€11.50</span></div><p>Με baby σπανάκι, φιλέτο πορτοκαλιού, κάσιους, σταφίδες μαύρες Κρήτης και κατσικίσιο τυρί ψημένο</p></article>
+        <article class="menu-item"><div class="menu-item-head"><h3>Σαλάτα Πλιγούρι και Ψητές Γαρίδες</h3><span class="price">€12.50</span></div></article>
+      </div>
+    </div>
+
+    <div id="cold" class="menu-section">
+      <h2>Κρύα Πιάτα</h2>
+      <div class="menu-divider"></div>
+      <div class="menu-items">
+        <article class="menu-item"><div class="menu-item-head"><h3>Φάβα</h3><span class="price">€4.60</span></div></article>
+        <article class="menu-item"><div class="menu-item-head"><h3>Χταπόδι Ξιδάτο</h3><span class="price">€8.50</span></div></article>
+        <article class="menu-item"><div class="menu-item-head"><h3>Καπνιστή Πέστροφα</h3><span class="price">€9.00</span></div></article>
+        <article class="menu-item"><div class="menu-item-head"><h3>Τζατζίκι</h3><span class="price">€4.30</span></div></article>
+        <article class="menu-item"><div class="menu-item-head"><h3>Τυροκαυτερή</h3><span class="price">€4.80</span></div></article>
+        <article class="menu-item"><div class="menu-item-head"><h3>Λευκή Ταραμοσαλάτα</h3><span class="price">€5.50</span></div></article>
+        <article class="menu-item"><div class="menu-item-head"><h3>Γαύρος Μαρινάτος</h3><span class="price">€4.80</span></div></article>
+      </div>
+    </div>
+
+    <div id="raw" class="menu-section">
+      <h2>Ωμά</h2>
+      <div class="menu-divider"></div>
+      <div class="menu-items">
+        <article class="menu-item"><div class="menu-item-head"><h3>Καρπάτσιο Λαβράκι</h3><span class="price">€15.00</span></div></article>
+        <article class="menu-item"><div class="menu-item-head"><h3>Σεβίτσε Λαβράκι με Λάδι Τρούφας</h3><span class="price">€17.00</span></div></article>
+      </div>
+    </div>
+
+    <div id="hot" class="menu-section">
+      <h2>Ζεστά Πιάτα</h2>
+      <div class="menu-divider"></div>
+      <div class="menu-items">
+        <article class="menu-item"><div class="menu-item-head"><h3>Φρέσκιες Τηγανητές Πατάτες</h3><span class="price">€4.00</span></div></article>
+        <article class="menu-item"><div class="menu-item-head"><h3>Κολοκυθάκια Τηγανητά</h3><span class="price">€4.30</span></div></article>
+        <article class="menu-item"><div class="menu-item-head"><h3>Ταλαγάνι Ψητό με Κερήθρα</h3><span class="price">€7.80</span></div></article>
+        <article class="menu-item"><div class="menu-item-head"><h3>Σαρδέλα Ψητή</h3><span class="price">€7.90</span></div></article>
+        <article class="menu-item"><div class="menu-item-head"><h3>Γαύρος Τηγανητός</h3><span class="price">€8.20</span></div></article>
+        <article class="menu-item"><div class="menu-item-head"><h3>Μύδια Αχνιστά</h3><span class="price">€12.50</span></div></article>
+        <article class="menu-item"><div class="menu-item-head"><h3>Καλαμάρι Τηγανητό</h3><span class="price">€13.20</span></div></article>
+        <article class="menu-item"><div class="menu-item-head"><h3>Καραβιδόψυχα</h3><span class="price">€15.00</span></div></article>
+        <article class="menu-item"><div class="menu-item-head"><h3>Burger Γαρίδας</h3><span class="price">€15.00</span></div><p>Με παναρισμένη γαρίδα, ντομάτα, καρδιές από baby gem, sos μαγιονέζας. Συνοδεύεται από τηγανητές πατάτες με γλυκιά πάπρικα</p></article>
+        <article class="menu-item"><div class="menu-item-head"><h3>Καλαμάρι Ψητό</h3><span class="price">€20.00</span></div></article>
+        <article class="menu-item"><div class="menu-item-head"><h3>Γαρίδες Σαγανάκι</h3><span class="price">€15.00</span></div></article>
+        <article class="menu-item"><div class="menu-item-head"><h3>Χταπόδι Ψητό</h3><span class="price">€18.00</span></div></article>
+        <article class="menu-item"><div class="menu-item-head"><h3>Σπανακόριζο με Φιλέτο Τσιπούρας</h3><span class="price">€19.00</span></div><p>Με ψαρόζουμο, φρέσκα μυρωδικά και αρώματα λεμονιού</p></article>
+        <article class="menu-item"><div class="menu-item-head"><h3>Γαρίδες Ψητές</h3><span class="price">€12.50</span></div></article>
+        <article class="menu-item"><div class="menu-item-head"><h3>Τσιπούρα Ιχθυοτροφείου με Χόρτα</h3><span class="price">€14.00</span></div></article>
+      </div>
+    </div>
+
+    <div id="soups" class="menu-section">
+      <h2>Σούπες</h2>
+      <div class="menu-divider"></div>
+      <div class="menu-items">
+        <article class="menu-item"><div class="menu-item-head"><h3>Ψαρόσουπα Βελουτέ</h3><span class="price">€11.00</span></div><p>Με μπακαλιάρο</p></article>
+      </div>
+    </div>
+
+    <div id="pasta" class="menu-section">
+      <h2>Ζυμαρικά</h2>
+      <div class="menu-divider"></div>
+      <div class="menu-items">
+        <article class="menu-item"><div class="menu-item-head"><h3>Κριθαρότο Θαλασσινών</h3><span class="price">€18.00</span></div></article>
+        <article class="menu-item"><div class="menu-item-head"><h3>Γαριδομακαρονάδα</h3><span class="price">€19.00</span></div></article>
+        <article class="menu-item"><div class="menu-item-head"><h3>Παπαρδέλες με Καραβίδες</h3><span class="price">€23.00</span></div><p>Με λευκή σάλτσα λεμονιού και αρωματικά μυρωδικά</p></article>
+      </div>
+    </div>
+
+    <div id="desserts" class="menu-section">
+      <h2>Γλυκά</h2>
+      <div class="menu-divider"></div>
+      <div class="menu-items">
+        <article class="menu-item"><div class="menu-item-head"><h3>Μους Γιαουρτιού με Λευκή Σοκολάτα</h3><span class="price">€8.00</span></div></article>
+        <article class="menu-item"><div class="menu-item-head"><h3>Cheesecake με Κρέμα Λεμόνι</h3><span class="price">€9.00</span></div></article>
+      </div>
+    </div>
+
+    <div id="drinks" class="menu-section">
+      <h2>Ποτά</h2>
+      <div class="menu-divider"></div>
+      <div class="menu-items">
+        <article class="menu-item"><div class="menu-item-head"><h3>Ψωμί</h3><span class="price">€0.50</span></div></article>
+        <article class="menu-item"><div class="menu-item-head"><h3>Μαχαιροπήρουνα</h3><span class="price">€0.00</span></div></article>
+        <article class="menu-item"><div class="menu-item-head"><h3>Coca-Cola 0.33 l</h3><span class="price">€2.20</span></div></article>
+        <article class="menu-item"><div class="menu-item-head"><h3>Fanta Κόκκινη 0.33 l</h3><span class="price">€2.20</span></div></article>
+        <article class="menu-item"><div class="menu-item-head"><h3>Sprite 0.33 l</h3><span class="price">€2.20</span></div></article>
+        <article class="menu-item"><div class="menu-item-head"><h3>Red Bull 0.25 l</h3><span class="price">€2.20</span></div></article>
+        <article class="menu-item"><div class="menu-item-head"><h3>Αύρα Φυσικό Μεταλλικό Νερό 1 l</h3><span class="price">€2.50</span></div></article>
+        <article class="menu-item"><div class="menu-item-head"><h3>Ξυνό Ανθρακούχο Νερό 0.75 l</h3><span class="price">€5.50</span></div></article>
+        <article class="menu-item"><div class="menu-item-head"><h3>Alfa Χωρίς Αλκοόλ 0.5 l</h3><span class="price">€4.50</span></div><p>0,3%vol</p></article>
+        <article class="menu-item"><div class="menu-item-head"><h3>Fischer Pilsner Φιάλη 0.5 l</h3><span class="price">€5.00</span></div><p>5%vol</p></article>
+        <article class="menu-item"><div class="menu-item-head"><h3>Κτήμα Τσελέπος Μαντινεία</h3><span class="price">€26.00</span></div><p>Μοσχοφίλερο, 12%vol</p></article>
+        <article class="menu-item"><div class="menu-item-head"><h3>Κυδωνίτσα Κτήμα Βατίστα 0.75 l</h3><span class="price">€29.00</span></div><p>12%vol</p></article>
+        <article class="menu-item"><div class="menu-item-head"><h3>Σαμαρόπετρα Κτήμα Κυρ-Γιάννη 0.75 l</h3><span class="price">€31.00</span></div><p>Sauvignon blanc, 12%vol</p></article>
+        <article class="menu-item"><div class="menu-item-head"><h3>La Tour Melas Nautilus</h3><span class="price">€25.00</span></div><p>Αγιωργίτικο, Syrah, 12%vol</p></article>
+        <article class="menu-item"><div class="menu-item-head"><h3>Τσιλιλή Χωρίς Γλυκάνισο 0.2 l</h3><span class="price">€10.00</span></div><p>40%vol</p></article>
+        <article class="menu-item"><div class="menu-item-head"><h3>Mελτέμι Γάτσιου 0.2 l</h3><span class="price">€10.00</span></div><p>40%vol</p></article>
+      </div>
+    </div>
+
+    <p style="text-align:center;font-size:.75rem;color:var(--muted-foreground);font-style:italic;margin-top:4rem">
+      Οι τιμές περιλαμβάνουν Φ.Π.Α. και δημοτικό φόρο.
+    </p>
+  </div>
+</section>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand"><div class="brand-name">ΠΑΠΑΛΙΝΑ</div><p>Εστιατόριο φρέσκων ψαριών και θαλασσινών στην καρδιά της Αθήνας.</p><p style="margin-top:1rem"><strong> Πραμάντων 20, Αθήνα 117 41, Greece</strong></p></div>
+      <div class="footer-col"><h4>Πλοήγηση</h4><ul><li><a href="index.html">Αρχική</a></li><li><a href="about.html">Σχετικά</a></li><li><a href="menu.html">Μενού</a></li><li><a href="gallery.html">Γκαλερί</a></li><li><a href="contact.html">Επικοινωνία</a></li></ul></div>
+      <div class="footer-col"><h4>Ακολουθήστε μας</h4><ul><li><a href="https://www.instagram.com/papalina.seafood/" target="_blank" rel="noopener">Instagram</a></li><li><a href="mailto:papalinaseafood@gmail.com">papalinaseafood@gmail.com</a></li></ul></div>
+    </div>
+    <div class="footer-bottom"><div>© <span id="year"></span> ΠΑΠΑΛΙΝΑ.</div><div>Αθήνα, Ελλάδα</div></div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>

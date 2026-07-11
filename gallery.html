@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Γκαλερί — ΠΑΠΑΛΙΝΑ</title>
+<meta name="description" content="Φωτογραφίες από τα πιάτα, τα φρέσκα ψάρια, τον χώρο και την ατμόσφαιρα του εστιατορίου ΠΑΠΑΛΙΝΑ." />
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<header class="site-header scrolled">
+  <div class="container">
+    <a href="index.html" class="brand">ΠΑΠΑΛΙΝΑ</a>
+    <nav class="nav">
+      <a href="index.html">Αρχική</a><a href="about.html">Σχετικά</a><a href="menu.html">Μενού</a><a href="gallery.html">Γκαλερί</a><a href="contact.html">Επικοινωνία</a>
+    </nav>
+    
+    <button class="hamburger" aria-label="Μενού"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<main>
+  <section class="page-header">
+    <div class="container">
+      <div class="eyebrow">Gallery</div>
+      <h1 class="font-display">Στιγμιότυπα</h1>
+      <p>Από την κουζίνα στο τραπέζι σας. Φωτογραφίες από τα πιάτα, τις πρώτες ύλες και τον χώρο της ΠΑΠΑΛΙΝΑ.</p>
+    </div>
+  </section>
+
+  <section style="padding-top:0">
+    <div class="container">
+      <div class="gallery-grid">
+        <button class="gallery-item tall" data-alt="Φρέσκα ψάρια στην ΠΑΠΑΛΙΝΑ"><img src="assets/hero.jpg" alt="Φρέσκα ψάρια στην ΠΑΠΑΛΙΝΑ"/></button>
+        <button class="gallery-item" data-alt="Χταπόδι σχάρας"><img src="assets/dish-octopus.jpg" alt="Χταπόδι σχάρας"/></button>
+        <button class="gallery-item" data-alt="Εξωτερικός χώρος"><img src="assets/exterior.jpg" alt="Εξωτερικός χώρος"/></button>
+        <button class="gallery-item" data-alt="Φρέσκες γαρίδες"><img src="assets/dish-shrimp.jpg" alt="Φρέσκες γαρίδες"/></button>
+        <button class="gallery-item tall" data-alt="Εσωτερικός χώρος του εστιατορίου"><img src="assets/interior.jpg" alt="Εσωτερικός χώρος"/></button>
+        <button class="gallery-item" data-alt="Λαβράκι ψητό"><img src="assets/dish-seabass.jpg" alt="Λαβράκι ψητό"/></button>
+        <button class="gallery-item" data-alt="Linguine θαλασσινών"><img src="assets/dish-pasta.jpg" alt="Linguine θαλασσινών"/></button>
+        <button class="gallery-item" data-alt="Χωριάτικη σαλάτα"><img src="assets/dish-salad.jpg" alt="Χωριάτικη σαλάτα"/></button>
+      </div>
+    </div>
+  </section>
+</main>
+
+<div id="lightbox" class="lightbox" role="dialog" aria-modal="true">
+  <button class="lb-close" aria-label="Κλείσιμο">
+    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+  </button>
+  <button class="lb-prev" aria-label="Προηγούμενη">
+    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"/></svg>
+  </button>
+  <img src="" alt="" />
+  <button class="lb-next" aria-label="Επόμενη">
+    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+  </button>
+  <div class="lb-caption"></div>
+</div>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand"><div class="brand-name">ΠΑΠΑΛΙΝΑ</div><p>Εστιατόριο φρέσκων ψαριών και θαλασσινών στην καρδιά της Αθήνας.</p><p style="margin-top:1rem"><strong> Πραμάντων 20, Αθήνα 117 41, Greece</strong></p></div>
+      <div class="footer-col"><h4>Πλοήγηση</h4><ul><li><a href="index.html">Αρχική</a></li><li><a href="about.html">Σχετικά</a></li><li><a href="menu.html">Μενού</a></li><li><a href="gallery.html">Γκαλερί</a></li><li><a href="contact.html">Επικοινωνία</a></li></ul></div>
+      <div class="footer-col"><h4>Ακολουθήστε μας</h4><ul><li><a href="https://www.instagram.com/papalina.seafood/" target="_blank" rel="noopener">Instagram</a></li><li><a href="mailto:papalinaseafood@gmail.com">papalinaseafood@gmail.com</a></li></ul></div>
+    </div>
+    <div class="footer-bottom"><div>© <span id="year"></span> ΠΑΠΑΛΙΝΑ.</div><div>Αθήνα, Ελλάδα</div></div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>

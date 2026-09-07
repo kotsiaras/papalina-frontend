@@ -1,5 +1,9 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.13.2/firebase-app.js";
-import { getMessaging, getToken } from "https://www.gstatic.com/firebasejs/10.13.2/firebase-messaging.js";
+import {
+    getMessaging,
+    getToken,
+    onMessage
+} from "https://www.gstatic.com/firebasejs/10.13.2/firebase-messaging.js";
 
 const firebaseConfig = {
 apiKey: "AIzaSyAvs9lHvMqSd3DE3Sd0iYaJ4C-CMJMyHBs",
@@ -12,6 +16,16 @@ apiKey: "AIzaSyAvs9lHvMqSd3DE3Sd0iYaJ4C-CMJMyHBs",
 
 const app = initializeApp(firebaseConfig);
 const messaging = getMessaging(app);
+onMessage(messaging, (payload) => {
+    console.log("Push received:", payload);
+
+    const title = payload.notification?.title || "Νέα ειδοποίηση";
+    const body = payload.notification?.body || "";
+
+    new Notification(title, {
+        body
+    });
+});
 
 const enableNotificationsBtn =
     document.getElementById("enableNotificationsBtn");

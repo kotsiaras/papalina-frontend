@@ -11,3 +11,18 @@ firebase.initializeApp({
 });
 
 const messaging = firebase.messaging();
+messaging.onBackgroundMessage((payload) => {
+    console.log("Background push received:", payload);
+
+    const notificationTitle =
+        payload.notification?.title || "Νέα κράτηση";
+
+    const notificationOptions = {
+        body: payload.notification?.body || ""
+    };
+
+    self.registration.showNotification(
+        notificationTitle,
+        notificationOptions
+    );
+});

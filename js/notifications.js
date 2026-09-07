@@ -26,7 +26,7 @@ enableNotificationsBtn.addEventListener("click", async () => {
         }
 
         const token = await getToken(messaging, {
-            "vapidKey:BPF0nsMOZD2KCpnPXUsO97rlmazieJB_iAGG7i2SUiC0kg9vHdWvCB-0CKVTFFB9WeF-T9sxkqDgLCFTpdYyzPg"
+            vapidKey:"BPF0nsMOZD2KCpnPXUsO97rlmazieJB_iAGG7i2SUiC0kg9vHdWvCB-0CKVTFFB9WeF-T9sxkqDgLCFTpdYyzPg"
         });
 
         if (token) {

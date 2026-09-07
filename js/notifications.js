@@ -25,9 +25,15 @@ enableNotificationsBtn.addEventListener("click", async () => {
             return;
         }
 
-        const token = await getToken(messaging, {
-            vapidKey:"BPF0nsMOZD2KCpnPXUsO97rlmazieJB_iAGG7i2SUiC0kg9vHdWvCB-0CKVTFFB9WeF-T9sxkqDgLCFTpdYyzPg"
-        });
+       const serviceWorkerRegistration =
+    await navigator.serviceWorker.register("/firebase-messaging-sw.js");
+
+await navigator.serviceWorker.ready;
+
+const token = await getToken(messaging, {
+            vapidKey:"BPF0nsMOZD2KCpnPXUsO97rlmazieJB_iAGG7i2SUiC0kg9vHdWvCB-0CKVTFFB9WeF-T9sxkqDgLCFTpdYyzPg",
+    serviceWorkerRegistration
+});
 
         if (token) {
             console.log("FCM Token:", token);

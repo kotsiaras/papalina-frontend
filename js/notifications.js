@@ -35,10 +35,26 @@ const token = await getToken(messaging, {
     serviceWorkerRegistration
 });
 
-        if (token) {
-            console.log("FCM Token:", token);
-            alert("Οι ειδοποιήσεις ενεργοποιήθηκαν!");
-        } else {
+       if (token) {
+    console.log("FCM Token:", token);
+
+    const response = await fetch(
+        "https://reservation-backend-cnxc.onrender.com/admin/push-token",
+        {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({ token })
+        }
+    );
+
+    if (!response.ok) {
+        throw new Error("Αποτυχία αποθήκευσης push token.");
+    }
+
+    alert("Οι ειδοποιήσεις ενεργοποιήθηκαν!");
+}else {
             alert("Δεν δημιουργήθηκε token ειδοποιήσεων.");
         }
 

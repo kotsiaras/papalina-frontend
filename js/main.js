@@ -190,7 +190,7 @@ submitButton.disabled = false;
 submitButton.textContent = "Κράτηση";
 
 } catch (error) {
-
+console.error("RESERVATION ERROR:", error);
     reservationMessage.textContent =
         "Κάτι πήγε στραβά. Προσπαθήστε ξανά.";
 

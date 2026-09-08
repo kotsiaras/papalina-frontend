@@ -152,8 +152,10 @@ console.log({
         console.log("Πάτησες κράτηση!");
     try {
 
-const response = await fetch("https://reservation-backend-cnxc.onrender.com/reserve", {
-          method: "POST",
+const response = await fetch(
+    "https://reservation-backend-cnxc.onrender.com/reserve",
+    {
+        method: "POST",
         headers: {
             "Content-Type": "application/json"
         },
@@ -165,14 +167,26 @@ const response = await fetch("https://reservation-backend-cnxc.onrender.com/rese
             time,
             people
         })
-    });
+    }
+);
 
-    const data = await response.json();
+const data = await response.json();
 
-    reservationMessage.textContent = data.message;
+if (!response.ok) {
+    reservationMessage.textContent =
+        data.message || "Η κράτηση δεν ολοκληρώθηκε.";
 
-    reservationForm.reset();
     submitButton.disabled = false;
+    submitButton.textContent = "Κράτηση";
+    return;
+}
+
+reservationMessage.textContent =
+    data.message || "Η κράτηση καταχωρήθηκε!";
+
+reservationForm.reset();
+
+submitButton.disabled = false;
 submitButton.textContent = "Κράτηση";
 
 } catch (error) {
